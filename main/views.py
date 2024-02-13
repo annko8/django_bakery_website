@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from django.shortcuts import HttpResponse
 
 
 def index(request):
-
-    return render(request, "main/index.html")
+    context = {"title": "Main"}
+    return render(request, "main/index.html", context)
 
 
 def about(request):
-    return HttpResponse("About page")
+    return render(request, "main/about.html")

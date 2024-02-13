@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{%block style %}
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+{%endblock %}
+
+{%block title%}About{%endblock%}
+
+{%block content%}
+<div class="video_block">
+    <video autoplay muted loop id="myVideo" class="about_video"><source src=https://www.parisbaguette.com/wp-content/uploads/pb-brand.mp4"" type="video/mp4"></video>
+</div>
+<div class="first_info_block">
+    <h1>Где улыбки подаются ежедневно</h1>
+    <p>Наслаждайтесь вкусной выпечкой, теплым хлебом, потрясающими пирожными и искусно сваренными напитками, чувствуя себя как дома.</p>
+</div>
+<div class="second_info_block">
+    <div class="achievements_items">
+        <div class="achievement_item">
+            <div class="item">
+                <div class="achievement_name">Высокое качество продукции</div>
+                <div class="achievement_text">Наш хлеб и пирожные приготовлены вручную с использованием только натуральных ингредиентов</div>
+            </div>
+            <div class="item">
+                <div class="achievement_name">Большой ассортимент</div>
+                <div class="achievement_text">У нас вы найдете широкий выбор свежей выпечки, начиная от ароматного хлеба и заканчивая изысканными тортами и пирожными</div>
+            </div>
+            <div class="item">
+                <div class="achievement_name">Собственные рецепты</div>
+                <div class="achievement_text">Наши кондитеры разработали эксклюзивные рецепты, которые делают наши торты и пирожные неповторимыми</div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock %}
