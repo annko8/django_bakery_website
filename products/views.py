@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_list_or_404
+from django.shortcuts import render
 
 from products.models import Categories, Products
 
@@ -9,9 +9,7 @@ def menu(request, category_slug):
     if category_slug == "all":
         products = Products.objects.all()
     else:
-        products = get_list_or_404(
-            Products.objects.filter(category__slug=category_slug)
-        )
+        products = Products.objects.filter(category__slug=category_slug)
 
     if order_by and order_by != "default":
         products = products.order_by(order_by)
