@@ -1,12 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 
 from products.models import Categories, Products
 
 
-def menu(request):
+def menu(request, category_slug):
+
+    if category_slug == "all":
+        products = Products.objects.all()
+    else:
+        products = get_list_or_404(
+            Products.objects.filter(category__slug=category_slug)
+        )
 
     categories = Categories.objects.all()
-    products = Products.objects.all()
 
     context = {
         "title": "Menu",

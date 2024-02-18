@@ -21,7 +21,7 @@ body {
     width: 100%;
     position: absolute;
     z-index: 1000;
-    padding-top: 25px;
+    padding-top: 20px;
 
 
 }
@@ -126,10 +126,17 @@ nav {
 .about {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .about_item {
-    width: 30%;
+    flex: 1;
+    padding: 0 10px
+}
+
+.about_img img {
+    max-width: 100%;
+    height: auto;
 }
 
 .statistics {
