@@ -25,7 +25,11 @@
             <div class="col-md-3">
                 <div class="products_item">
                     <div class="product_img">
-                        <a href="#"><img src="http://placehold.it/300x400"></a>
+                        {% if product.image %}
+                            <a href="{% url "products:product" product.slug %}"><img src="{{product.image.url}}" alt="{{product.name}}"></a>
+                        {% else %}
+                            <img src="{% static "products/img/no_image.png" %}">
+                        {% endif %}
                     </div>
 
                     <div class="product_body">

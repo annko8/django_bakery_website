@@ -407,6 +407,21 @@ h1 {
     margin: 0 15px;
 }
 
-
-
 /* product */
+
+.product {
+    padding-top: 80px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.product_image img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.product_image {
+    margin-bottom: 10px;
+}

@@ -9,17 +9,25 @@
 
 {% block content %}
 
-<div class="product_item">
-    <div class="product_img">
-        <img weight="220" height="220" src="{% static 'products/img/cake.jpg' %}" style="border-radius: 25px;">
+<div class="product">
+    <div class="product_image">
+        {% if product.image %}
+            <img src="{{product.image.url}}" alt="{{product.name}}">
+        {% else %}
+            <img src="{% static "products/img/no_image.png" %}">
+        {% endif %}
     </div>
-    <div class="product_name">
-        Кондитерские изделия
+
+    <div class="product_body">
+        <h3 class="product_name">{{product.name}}</h3>
+        <p class="product_description">{{product.description}}</p>
+
+        <div class="info-price">
+            <p class="product_price">{{product.price}}<small>BYN</small></p>
+            <a href="" class="btn add-to-cart">В корзину</a>
+        </div>
+
     </div>
-    <p class="product_price">
-        15.99
-    </p>
-    <button data-action="add" class="btn btn-outline-secondary add-btn update-cart">Добавить в корзину</button>
 </div>
 
 {% endblock %}
