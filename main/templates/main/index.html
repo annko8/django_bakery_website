@@ -1,11 +1,10 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{%block style %}
-    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
-{%endblock %}
-
 {% block title %}{{title}}{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="intro">

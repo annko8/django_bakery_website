@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Product{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="product_item">
+    <div class="product_img">
+        <img weight="220" height="220" src="{% static 'products/img/cake.jpg' %}" style="border-radius: 25px;">
+    </div>
+    <div class="product_name">
+        Кондитерские изделия
+    </div>
+    <p class="product_price">
+        15.99
+    </p>
+    <button data-action="add" class="btn btn-outline-secondary add-btn update-cart">Добавить в корзину</button>
+</div>
+
+{% endblock %}
