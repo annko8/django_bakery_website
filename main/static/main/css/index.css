@@ -391,27 +391,29 @@ h1 {
 .products_block {
     margin-left: 10%;
     margin-right: 10%;
+    padding-top: 35px;
 }
 
 .choise {
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;
+    justify-content: space-between;*/
     margin-left: 10%;
     margin-right: 10%;
     padding: 0;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    text-align: right;
+    /*margin-top: 25px;
+    margin-bottom: 25px;*/
 }
 
 .choise a {
     text-decoration: none;
-    text-align: center;
-    line-height: 40px;
+    /*text-align: center;
+    line-height: 40px;*/
 }
 
 .choise li {
     list-style: none;
-    margin: 0 15px;
+    text-align: right;
 }
 
 /* product */
@@ -431,4 +433,21 @@ h1 {
 
 .product_image {
     margin-bottom: 10px;
+}
+
+.dropdown {
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.accept_button {
+    margin-top: 25px;
+}
+
+.sort {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
