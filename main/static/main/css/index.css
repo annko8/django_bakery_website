@@ -455,7 +455,7 @@ h1 {
 /* login */
 
 .wrapper {
-
+    position: relative;
     width: 420px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
@@ -549,3 +549,33 @@ h1 {
     display: flex;
     justify-content: space-between;
 }*/
+
+/* mistakes reg page */
+
+.alert {
+    position: absolute;
+    top: 0;
+    right: -300px;
+    /* Правый отступ от формы */
+    width: 250px;
+    /* Ширина блока ошибки */
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-dismissible {
+    padding-right: 35px;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.fade.show {
+    opacity: 1;
+}
