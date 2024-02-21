@@ -40,3 +40,6 @@ class Products(models.Model):
 
     def __str__(self):
         return self.name
+
+    def sell_price(self):
+        return self.price

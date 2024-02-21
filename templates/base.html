@@ -23,7 +23,7 @@
                         <a class="nav-link" href="#">Мой профиль</a>
                         <a class="nav-link" href="{% url 'user:logout' %}">Выйти</a>
                     {% endif %}
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{% url 'cart:cart' %}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ffffff"
                             viewBox="0 0 256 256">
                             <path
@@ -35,7 +35,7 @@
             </div>
         </div>
     </header>
-    
+
     {% block content %}
     {% endblock  %}
 

@@ -15,6 +15,10 @@ def login(request):
             user = auth.authenticate(username=username, password=password)
             if user:
                 auth.login(request, user)
+                # messages.success(request, f"{username}, рады видеть Вас снова!")
+                redirect_page = request.POST.get("next", None)
+                if redirect_page and redirect_page != reverse("user:logout"):
+                    return HttpResponseRedirect(request.POST.get("next"))
                 return HttpResponseRedirect(reverse("main:index"))
     else:
         form = UserLoginForm()
@@ -24,6 +28,7 @@ def login(request):
 
 
 def logout(request):
+    # messages.success(request, f"{request.user.username}, до скорых встреч!")
     auth.logout(request)
     return redirect(reverse("main:index"))
 
@@ -36,6 +41,7 @@ def registration(request):
             form.save()
             user = form.instance
             auth.login(request.user)
+            # messages.success(request, f"{user.username}, добро пожаловать!")
             return HttpResponseRedirect(reverse("main:index"))
     else:
         form = UserRegistrationForm()
