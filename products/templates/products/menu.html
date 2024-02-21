@@ -73,7 +73,9 @@
 
                         <div class="info-price">
                             <p class="product_price">{{product.price}}<small>BYN</small></p>
-                            <a href="{% url "cart:cart_add" product.slug %}" class="btn add-to-cart">В корзину</a>
+                            <a href="{% url "cart:cart_add" %}" class="btn add-to-cart" 
+                            data-product-id="{{product.id}}">
+                            {% csrf_token %}В корзину</a>
                         </div>
 
                     </div>
