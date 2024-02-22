@@ -12,5 +12,16 @@ class CategoriesAdmin(admin.ModelAdmin):
 
 
 @admin.register(Products)
-class Productsdmin(admin.ModelAdmin):
+class ProductsAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
+    list_display = [
+        "name",
+        "quantity",
+        "price",
+    ]
+    search_fields = [
+        "name",
+    ]
+    list_filter = [
+        "category",
+    ]
