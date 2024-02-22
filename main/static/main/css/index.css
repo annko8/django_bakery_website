@@ -50,7 +50,7 @@ nav {
 
 .logo {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .nav-link:hover {
@@ -280,7 +280,7 @@ nav {
 }
 
 h1 {
-    color: hsl(0, 0%, 30%);
+    color: black;
     margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.2;
@@ -790,4 +790,24 @@ h1 {
     color: #000000;
     /* changed to black */
     text-decoration: none;
+}
+
+/* contacts */
+
+.map {
+    padding: 80px 0;
+}
+
+.contacts_block {
+    padding: 0 100px;
+}
+
+.contacts_items {
+    display: flex;
+}
+
+.contacts_item {
+    flex: 1 1 0;
+    text-align: center;
+    padding: 0px 0px;
 }

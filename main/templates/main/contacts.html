@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block title%}Contacts{%endblock%}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+{% endblock %}
+
+{%block content%}
+<div class="map">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac6648821da4eee9885f0d999e088054823a7dad647971328cd39bfe9dd8bc4bc&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+<div class="contacts_block">
+    <div class="contacts_items">
+        <div class="contacts_item">
+            <h3>Адрес</h3>
+            <p>ул. Интернациональная, 21</p><br>
+            <h3>Телефон</h3>
+            <p>+375 (29) 456-87-02</p>
+        </div>
+        <div class="contacts_item">
+            <h3>Время работы</h3>
+            <p>пн-пт: 7:30-22:00, сб-вс: 9:00-22:00</p><br>
+            <h3>Почта</h3>
+            <p>bonboncafe@gmail.com</p>
+        </div>
+    </div>
+</div>
+{%endblock %}
