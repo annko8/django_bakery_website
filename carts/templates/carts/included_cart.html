@@ -54,8 +54,8 @@
     </div>
 </div>
 <!-- Закончилась разметка корзины -->
-{% if carts %}
-<a class="btn btn-dark" href="#">
+{% if carts and not orders %}
+<a class="btn btn-dark" href="{% url "orders:create_order" %}">
     Оформить заказ
 </a>
 {% endif %} 

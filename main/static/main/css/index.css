@@ -591,6 +591,12 @@ h1 {
 .container_cart_2 {
     width: 70%;
     margin: auto;
+    /*padding-bottom: 20px;*/
+}
+
+.container_cart_3 {
+    width: 50%;
+    margin: auto;
     padding-bottom: 20px;
 }
 
@@ -617,10 +623,6 @@ h1 {
 
 .rounded {
     border-radius: 0.25rem !important;
-}
-
-.custom-shadow {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 .text-center {
