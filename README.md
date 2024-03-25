@@ -1,21 +1,26 @@
 # Bakery Website
 
-install dependecies
+1. Check for Docker presence
 ```
-  pip freeze > requirements. txt
-```
-
-database migartions
-```
-  // load data in DB
-  python manage.py loaddata fixtures/products/categories.json 
-  python manage.py loaddata fixtures/products/products.json
-
-  python manage.py makemigrations
-  python manage.py migrate  
+  docker -v
 ```
 
-local run
+2. Clone the repository
 ```
-    python manage.py runserver
+  git clone <link>
+```
+
+3. Launch the container
+```
+  docker-compose up -d --build
+```
+
+4. Start docker-compose from the root directory
+```
+  docker-compose up -d
+```
+
+5. Create a superuser
+```
+  docker-compose exec web python manage.py createsuperuser
 ```
