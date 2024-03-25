@@ -1,4 +1,4 @@
-# Backery Website
+# Bakery Website
 
 install dependecies
 ```
@@ -7,7 +7,7 @@ install dependecies
 
 database migartions
 ```
-  // загрузить данные в БД
+  // load data in DB
   python manage.py loaddata fixtures/products/categories.json 
   python manage.py loaddata fixtures/products/products.json
 
